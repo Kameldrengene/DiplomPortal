@@ -14,7 +14,6 @@ class kursus extends React.Component {
                 {courseStore.courses.filter(course => course.id === id).map((course, key) =>
                     <ul>
                         {course.Lektioner.map((course, key) =>
-
                         <li>{course.Dato} - {course.Beskrivelse} - {course.Lektier} - {course.Øvelser}</li>
                     )}
                     </ul>
@@ -25,4 +24,4 @@ class kursus extends React.Component {
     }
 }
 
-export default kursus;
+export default observer(kursus);

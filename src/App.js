@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/" component={kurser}/>
             <Route path="/kalender" component={kalender}/>
             <Route path="/karakter" component={karakter}/>
-            <Route path="/course/:id" courseId ="" component={kursus}/>
+            <Route path="/course/:id" component={kursus}/>
         </div>
       </Router>
   );
