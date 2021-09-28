@@ -1,15 +1,15 @@
 # Diplom Portal :rocket:
 
 #### Prerequisite:
-Node.js 14 or above installed on machine.
+Node.js 14 or above installed on the machine.
 
 #### Getting started:
-Clone this project to your system. In the project directory, you should run below commands.
+Clone this project to your system. In the project directory, you should run the below commands.
 
 Get necessary packages and install to run the project :arrow_down:
 ### `npm install`
 
-Start project en development mode :running:
+Start project on development mode :running:
 ### `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -24,7 +24,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Application is ready to be deployed!
 
-From Node.js you can run below commands (Execution policy should not be restricted):
+From Node.js you can run commands at below (Execution policy should not be restricted):
 ### `npm install -g serve`
 ### `serve -s build`
 
@@ -32,9 +32,9 @@ From Docker:
 
 ```docker run -d --name diplomportal -p 8080:80 -v path_to_project_\build:/usr/share/nginx/html nginx```
 
-Where path_to_project is the absolute path of the project root. Docker image will be available soon. :muscle:
+Where path_to_project is the absolute path of the project root. The Docker image will be available soon. :muscle:
 
 From NGINX:
 #### Move the content of build files in to html folder where NGINX serves pages.
 
-The code could be developed further with adding features such as weather reports and calendar. Courses listed on the site are received from [https://raw.githubusercontent.com/VolkanIsik86/dummydata/main/courses.json]() and can be used for testing purposes. 
+The code could be developed further by adding features such as weather reports and calendars. Courses listed on the site are received from [https://raw.githubusercontent.com/VolkanIsik86/dummydata/main/courses.json]() and can be used for testing purposes.
