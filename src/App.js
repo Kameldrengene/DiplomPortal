@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Route} from 'react-router-dom';
 import kurser from "./Components/Kurser";
 import kalender from "./Components/Kalender";
 import karakter from "./Components/Karakter";
+import kursus from "./Components/Kursus";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/" component={kurser}/>
             <Route path="/kalender" component={kalender}/>
             <Route path="/karakter" component={karakter}/>
+            <Route path="/course/:id" courseId ="" component={kursus}/>
         </div>
       </Router>
   );
