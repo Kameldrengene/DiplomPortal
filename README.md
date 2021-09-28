@@ -32,7 +32,7 @@ From Docker:
 
 ```docker run -d --name diplomportal -p 8080:80 -v path_to_project_\build:/usr/share/nginx/html nginx```
 
-Where path_to_project is the absolute path of the project root. Docker image will be available soon.
+Where path_to_project is the absolute path of the project root. Docker image will be available soon. :muscle:
 
 From NGINX:
 #### Move the content of build files in to html folder where NGINX serves pages.
