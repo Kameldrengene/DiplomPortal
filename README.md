@@ -3,7 +3,6 @@
 In the project directory, you should run below commands.
 
 Get necessary packages and install to run the project :arrow_down:
-### `npm update`
 ### `npm install`
 
 Start project en development mode :running:
