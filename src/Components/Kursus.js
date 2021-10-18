@@ -2,6 +2,7 @@ import React from "react";
 import {Grid, Paper, styled} from "@material-ui/core";
 import {observer} from "mobx-react";
 import {courseStore} from "../Stores/CourseStore";
+import CourseTable from "./CourseTable";
 
 
 class kursus extends React.Component {
@@ -10,7 +11,7 @@ class kursus extends React.Component {
         return <div>
             <h1>Course {id}
             </h1>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} item xs={12} md={12}>
                 {courseStore.courses.filter(course => course.id === id).map((course, key) =>
                     <ul>
                         {course.Lektioner.map((course, key) =>
@@ -18,8 +19,9 @@ class kursus extends React.Component {
                     )}
                     </ul>
                 )}
-
+                <CourseTable/>
             </Grid>
+
         </div>
     }
 }
