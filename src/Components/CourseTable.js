@@ -14,14 +14,13 @@ import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-function createData(name, calories, fat, carbs, protein, price) {
+function createData(week, description, homework, assignment, files) {
     return {
-        name,
-        calories,
-        fat,
-        carbs,
-        protein,
-        price,
+        week,
+        description,
+        homework,
+        assignment,
+        files,
         history: [
             {
                 date: '2020-01-05',
@@ -54,12 +53,12 @@ function Row(props) {
                     </IconButton>
                 </TableCell>
                 <TableCell component="th" scope="row">
-                    {row.name}
+                    {row.week}
                 </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                <TableCell align="right">{row.description}</TableCell>
+                <TableCell align="right">{row.homework}</TableCell>
+                <TableCell align="right">{row.assignment}</TableCell>
+                <TableCell align="right">{row.files}</TableCell>
             </TableRow>
             <TableRow>
                 <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -86,7 +85,7 @@ function Row(props) {
                                             <TableCell>{historyRow.customerId}</TableCell>
                                             <TableCell align="right">{historyRow.amount}</TableCell>
                                             <TableCell align="right">
-                                                {Math.round(historyRow.amount * row.price * 100) / 100}
+                                                {Math.round(historyRow.amount * row.files * 100) / 100}
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -102,9 +101,9 @@ function Row(props) {
 
 Row.propTypes = {
     row: PropTypes.shape({
-        calories: PropTypes.number.isRequired,
-        carbs: PropTypes.number.isRequired,
-        fat: PropTypes.number.isRequired,
+        description: PropTypes.string.isRequired,
+        homework: PropTypes.string.isRequired,
+        assignment: PropTypes.string.isRequired,
         history: PropTypes.arrayOf(
             PropTypes.shape({
                 amount: PropTypes.number.isRequired,
@@ -112,18 +111,19 @@ Row.propTypes = {
                 date: PropTypes.string.isRequired,
             }),
         ).isRequired,
-        name: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        protein: PropTypes.number.isRequired,
+        week: PropTypes.number.isRequired,
+        files: PropTypes.string.isRequired,
     }).isRequired,
 };
 
 const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-    createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
-    createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-    createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+    createData(1, "Lav dit main layout med Material-UI (el. lign teknologi!)\n" +
+        "Sørg for at det opfører sig pænt på både Computer og mobil\n", "Emmit 158-174\n" +
+        "Emmit 108-112", "https://www.inside.dtu.dk/da/undervisning", "https://www.inside.dtu.dk/da/undervisning"),
+    createData(2, "", "", "", ""),
+    createData(3, "", "", "", ""),
+    createData(4, "", "", "", ""),
+    createData(5, "", "", "", ""),
 ];
 
 export default function CollapsibleTable() {
@@ -133,16 +133,16 @@ export default function CollapsibleTable() {
                 <TableHead>
                     <TableRow>
                         <TableCell />
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                        <TableCell>Week</TableCell>
+                        <TableCell align="right">Description</TableCell>
+                        <TableCell align="right">Homework</TableCell>
+                        <TableCell align="right">Assignments</TableCell>
+                        <TableCell align="right">Files</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
-                        <Row key={row.name} row={row} />
+                        <Row key={row.week} row={row} />
                     ))}
                 </TableBody>
             </Table>

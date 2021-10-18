@@ -11,7 +11,7 @@ class kursus extends React.Component {
         return <div>
             <h1>Course {id}
             </h1>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} item xs={12} md={12}>
                 {courseStore.courses.filter(course => course.id === id).map((course, key) =>
                     <ul>
                         {course.Lektioner.map((course, key) =>
