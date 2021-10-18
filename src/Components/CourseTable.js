@@ -85,7 +85,7 @@ function Row(props) {
                                             <TableCell>{historyRow.customerId}</TableCell>
                                             <TableCell align="right">{historyRow.amount}</TableCell>
                                             <TableCell align="right">
-                                                {Math.round(historyRow.amount * row.files * 100) / 100}
+                                                {Math.round(historyRow.amount * 1 * 100) / 100}
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -120,7 +120,7 @@ const rows = [
     createData(1, "Lav dit main layout med Material-UI (el. lign teknologi!)\n" +
         "Sørg for at det opfører sig pænt på både Computer og mobil\n", "Emmit 158-174\n" +
         "Emmit 108-112", "https://www.inside.dtu.dk/da/undervisning", "https://www.inside.dtu.dk/da/undervisning"),
-    createData(2, "", "", "", ""),
+    createData(2, "Se const row for at tilføje flere rows i CourseTable.js", "Lav så man laver en række udfra data fra et kursus", "Ret i undermenu'en så man faktisk kan bruge det til noget -> Vi skal nok finde ud af om det kan bruges :^)", "😎"),
     createData(3, "", "", "", ""),
     createData(4, "", "", "", ""),
     createData(5, "", "", "", ""),
