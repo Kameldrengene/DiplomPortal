@@ -2,6 +2,7 @@ import React from "react";
 import {Grid, Paper, styled} from "@material-ui/core";
 import {observer} from "mobx-react";
 import {courseStore} from "../Stores/CourseStore";
+import CourseTable from "./CourseTable";
 
 
 class kursus extends React.Component {
@@ -18,8 +19,9 @@ class kursus extends React.Component {
                     )}
                     </ul>
                 )}
-
+                <CourseTable/>
             </Grid>
+
         </div>
     }
 }
